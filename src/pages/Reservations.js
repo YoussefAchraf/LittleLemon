@@ -27,6 +27,26 @@ const Reservations = () => {
     <>
       <Helmet>
         <title>Reservations Page - Little Lemon</title>
+        <meta
+          name="description"
+          content="Make a reservation at Little Lemon and enjoy a delightful dining experience. Reserve your table for any occasion - birthday, anniversary, or any other special event. Experience the taste of happiness with Little Lemon!"
+        />
+        <meta property="og:title" content="Reservations Page - Little Lemon" />
+        <meta
+          property="og:description"
+          content="Make a reservation at Little Lemon and enjoy a delightful dining experience. Reserve your table for any occasion - birthday, anniversary, or any other special event. Experience the taste of happiness with Little Lemon!"
+        />
+        <meta property="og:image" content="%PUBLIC_URL%/og-reservations-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Reservations Page - Little Lemon" />
+        <meta
+          name="twitter:description"
+          content="Make a reservation at Little Lemon and enjoy a delightful dining experience. Reserve your table for any occasion - birthday, anniversary, or any other special event. Experience the taste of happiness with Little Lemon!"
+        />
+        <meta name="twitter:image" content="%PUBLIC_URL%/twitter-reservations-image.jpg" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="Little Lemon, restaurant, reservations, table booking" />
       </Helmet>
       <div className=" w-[80dvw] md:max-w-md mx-auto my-[10vh] md:my-[15vh]">
         <h2 className="text-2xl font-semibold mb-4">Make a Reservation</h2>
