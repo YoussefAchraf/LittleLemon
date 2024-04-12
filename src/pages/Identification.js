@@ -25,8 +25,10 @@ const Identification = ( ) => {
          <meta name="keywords" content="Little Lemon, restaurant, identification, login, sign-in, security" />
          <title>Identification | Little Lemon</title>
       </Helmet>
-        <section className="w-[100dvw] h-[100dvh] overflow-x-hidden">
-      
+        <section className="w-full h-auto flex items-center justify-center">
+          <div className="md: w-[80dvw] h-[80dvh] mt-[10dvh] bg-[lightgrey]">
+            
+          </div>
         </section>
       </>
     );

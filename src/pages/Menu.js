@@ -1,5 +1,10 @@
+import FoodCard from "./components/FoodCard";
+import meals from "./fakeapi/MealsApi";
 import { Helmet } from "react-helmet-async";
 const Menu = ( ) => {
+  const saladMeals = meals.filter((meal) => meal.type === "salad");
+  const delightMeals = meals.filter((meal) => meal.type === "delight");
+  const plateMeals = meals.filter((meal) => meal.type === "plate");
     return(
       <>
         <Helmet>
@@ -25,9 +30,52 @@ const Menu = ( ) => {
           <meta name="keywords" content="Little Lemon, restaurant, menu, dishes, appetizers, desserts" />
           <title>Menu | Little Lemon</title>
         </Helmet>
-
-        <section className="w-[100dvw] h-[100dvh] overflow-x-hidden">
-      
+        <section className="w-full h-auto mt-[15dvh] flex flex-col px-[10dvw]">
+          <section className="w-[80dvw] h-auto flex flex-col">
+            <h1 className="text-[grey] text-[30px] py-[8dvh] font-semibold">Our Salads</h1>
+            <div className="flex flex-wrap gap-3 content-start">
+              {saladMeals.map((meal, index) => (
+                <FoodCard
+                  key={index}
+                  img={meal.image}
+                  imgAlt={meal.name}
+                  foodTitle={meal.name}
+                  foodDesc={meal.description}
+                  foodPrice={`$${meal.price.toFixed(2)}`}
+                />
+              ))}
+            </div>
+          </section>
+          <section className="w-[80dvw] h-auto flex flex-col">
+            <h1 className="text-[grey] text-[30px] py-[8dvh] font-semibold">Our meals</h1>
+            <div className="flex flex-wrap gap-3">
+              {plateMeals.map((meal, index) => (
+                <FoodCard
+                  key={index}
+                  img={meal.image}
+                  imgAlt={meal.name}
+                  foodTitle={meal.name}
+                  foodDesc={meal.description}
+                  foodPrice={`$${meal.price.toFixed(2)}`}
+                />
+              ))} 
+            </div>
+          </section>
+          <section className="w-[80dvw] h-auto flex flex-col">
+            <h1 className="text-[grey] text-[30px] py-[8dvh] font-semibold">Our delights</h1>
+            <div className="flex flex-wrap gap-3 content-start">
+              {delightMeals.map((meal, index) => (
+                <FoodCard
+                  key={index}
+                  img={meal.image}
+                  imgAlt={meal.name}
+                  foodTitle={meal.name}
+                  foodDesc={meal.description}
+                  foodPrice={`$${meal.price.toFixed(2)}`}
+                />
+              ))}
+            </div>
+          </section>
         </section>
       </>
     );

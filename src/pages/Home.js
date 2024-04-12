@@ -55,16 +55,16 @@ const Home = ( ) => {
             />
           </div>
           <div className="mt-[10dvh] flex flex-col md:flex-row items-center justify-center gap-[2dvw]">
-            {meals.map((meal, index) => (
-              <FoodCard
-                key={index}
-                img={meal.image}
-                imgAlt={meal.name}
-                foodTitle={meal.name}
-                foodDesc={meal.description}
-                foodPrice={`$${meal.price.toFixed(2)}`}
-              />
-            ))}
+          {meals.filter(meal => meal.ws).map((meal, index) => (
+            <FoodCard
+              key={index}
+              img={meal.image}
+              imgAlt={meal.name}
+              foodTitle={meal.name}
+              foodDesc={meal.description}
+              foodPrice={`$${meal.price.toFixed(2)}`}
+            />
+          ))}
           </div>
           <div className="w-full h-auto py-[10dvh] bg-[#495e57] mt-[1dvh] flex flex-col ">
             <p className="text-white font-bold text-2xl pl-[2dvw] pb-[2dvh]">Our clients reviews</p>
@@ -81,7 +81,7 @@ const Home = ( ) => {
             </div>
           </div>
         </section>
-      <section className="w-full h-auto mb-[4dvh] flex flex-col items-center justify-center md:flex-row px-[5dvw]">
+      <section id="about" className="w-full h-auto mb-[4dvh] flex flex-col items-center justify-center md:flex-row px-[5dvw]">
         <div className=" w-[80dvw] md:w-[40dvw] pb-[5dvh]">
           <h1 className="text-[#f4ce14] font-serif font-extrabold text-2xl pb-[1dvh] md:text-4xl md:py-[1dvh]">Little Lemon</h1>
           <h3 className="text-[#495e57] font-serif font-extrabold text-xl pb-[1dvh] md:text-2xl md:py-[1dvh]">Chicago</h3>
