@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import UsrInpt from "./components/UsrInpt";
 const Identification = ( ) => {
     return(
       <>
@@ -26,8 +27,12 @@ const Identification = ( ) => {
          <title>Identification | Little Lemon</title>
       </Helmet>
         <section className="w-full h-auto flex items-center justify-center">
-          <div className="md: w-[80dvw] h-[80dvh] mt-[10dvh] bg-[lightgrey]">
-            
+          <div className="md: w-[80dvw] h-[80dvh] mt-[15dvh] bg-[lightgrey] flex items-center justify-center">
+            <UsrInpt
+              Inpt="text"
+              InptId="username"
+              LbVl="email"
+            />
           </div>
         </section>
       </>
