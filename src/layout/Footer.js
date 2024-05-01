@@ -16,7 +16,6 @@ const Footer = ( ) => {
         <div>
           <h3 className="text-[white] text-lg font-bold">Sitemap</h3>  
           <Link to="/" className="text-[#e0e0e0] block text-base"> Home</Link>
-          <Link to="/about" className="text-[#e0e0e0] block text-base">About</Link>
           <Link to="/menu" className="text-[#e0e0e0] block text-base">Menu</Link>
           <Link to="/reservations" className="text-[#e0e0e0] block text-base">Reservations</Link>
           <Link to="/orders" className="text-[#e0e0e0] block text-base">Orders</Link>

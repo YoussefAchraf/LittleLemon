@@ -50,7 +50,6 @@ const Header = () => {
            style={{ display: openNav ? "block" : "none" }}
       >
         <Link to="/" className={`block h-[10dvh] w-[80dvw] leading-[10dvh] no-underline mx-auto my-0 hover:bg-[white] hover:text-[#495e57] hover:rounded-[20px] ${location.pathname === '/' ? 'bg-[white] text-[#495e57] rounded-[20px]' : ' text-[white]'}`} onClick={closeNav}>Home</Link>
-        <Link to="/about" className={`block h-[10dvh] w-[80dvw] leading-[10dvh] no-underline mx-auto my-0 hover:bg-[white] hover:text-[#495e57] hover:rounded-[20px] ${location.pathname === '/about' ? 'bg-[white] text-[#495e57] rounded-[20px]' : ' text-[white]'}`} onClick={closeNav}>About</Link>
         <Link to="/menu" className={`block h-[10dvh] w-[80dvw] leading-[10dvh] no-underline mx-auto my-0 hover:bg-[white] hover:text-[#495e57] hover:rounded-[20px] ${location.pathname === '/menu' ? 'bg-[white] text-[#495e57] rounded-[20px]' : ' text-[white]'}`} onClick={closeNav}>Menu</Link>
         <Link to="/reservations" className={`block h-[10dvh] w-[80dvw] leading-[10dvh] no-underline mx-auto my-0 hover:bg-[white] hover:text-[#495e57] hover:rounded-[20px] ${location.pathname === '/reservations' ? 'bg-[white] text-[#495e57] rounded-[20px]' : ' text-[white]'}`} onClick={closeNav}>Reservations</Link>
         <Link to="/orders" className={`block h-[10dvh] w-[80dvw] leading-[10dvh] no-underline mx-auto my-0 hover:bg-[white] hover:text-[#495e57] hover:rounded-[20px] ${location.pathname === '/orders' ? 'bg-[white] text-[#495e57] rounded-[20px]' : ' text-[white]'}`} onClick={closeNav}>Orders</Link>
@@ -64,7 +63,6 @@ const Header = () => {
       </div>
       <nav>
         <Link to="/" className={`px-[1dvw] font-bold  ${location.pathname === '/' ? 'text-[#F4CE15]' : 'text-[#495e57]'}`}> Home</Link>
-        <Link to="/about" className={`px-[1dvw] font-bold  ${location.pathname === '/about' ? 'text-[#F4CE15]' : 'text-[#495e57]'}`}>About</Link>
         <Link to="/menu" className={`px-[1dvw] font-bold  ${location.pathname === '/menu' ? 'text-[#F4CE15]' : 'text-[#495e57]'}`}>Menu</Link>
         <Link to="/reservations" className={`px-[1dvw] font-bold  ${location.pathname === '/reservations' ? 'text-[#F4CE15]' : 'text-[#495e57]'}`}>Reservations</Link>
         <Link to="/orders" className={`px-[1dvw] font-bold  ${location.pathname === '/orders' ? 'text-[#F4CE15]' : 'text-[#495e57]'}`}>Orders</Link>

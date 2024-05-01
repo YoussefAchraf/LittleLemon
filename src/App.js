@@ -5,7 +5,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={ <Home /> } />
-        <Route path="/About" element={ <About /> } />
+        {/*<Route path="/About" element={ <About /> } />*/}
         <Route path="/Menu" element={ <Menu /> } />
         <Route path="/Reservations" element={ <Reservations /> } />
         <Route path="/Orders" element={ <Orders /> } />
