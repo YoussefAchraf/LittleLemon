@@ -25,7 +25,7 @@ const About = ( ) => {
        <meta name="keywords" content="Little Lemon, restaurant, about us, philosophy, team, delicious meals" />
        <title>About Us | Little Lemon</title>
       </Helmet>
-      <section className="w-[100dvw] h-[100dvh] overflow-x-hidden">
+      <section className="w-full h-[100dvh] overflow-x-hidden">
       
       </section>
     </>

@@ -26,7 +26,7 @@ const Orders = () => {
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="Little Lemon, restaurant, orders, online ordering" />
       </Helmet>
-      <section className="w-[100dvw] h-[100dvh] overflow-x-hidden">
+      <section className="w-full h-[100dvh] overflow-x-hidden">
         
       </section>
     </>
