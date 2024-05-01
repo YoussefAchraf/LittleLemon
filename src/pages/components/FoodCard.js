@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useOrder } from "../context/OrderContext.js";
 
 const FoodCard = (props) => {
+  const { addOrderItem } = useOrder();
   const [showShareOptions, setShowShareOptions] = useState(false);
 
   const handleShareClick = () => {
@@ -9,6 +11,10 @@ const FoodCard = (props) => {
 
   const handleCancelClick = () => {
     setShowShareOptions(false);
+  };
+
+  const handleOrderClick = () => {
+    addOrderItem({ title: props.foodTitle, price: props.foodPrice });
   };
 
   return (
@@ -41,7 +47,7 @@ const FoodCard = (props) => {
             <button onClick={handleShareClick} className="bg-[#495e57] text-white font-bold py-2 px-4 rounded mr-2">
               Share
             </button>
-            <button className="bg-[#F4CE15] text-white font-bold py-2 px-4 rounded">
+            <button onClick={handleOrderClick} className="bg-[#F4CE15] text-white font-bold py-2 px-4 rounded">
               Order now
             </button>
           </div>
