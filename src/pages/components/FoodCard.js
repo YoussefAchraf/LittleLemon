@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useOrder } from "../context/OrderContext.js";
+import { useOrder } from "../context/OrderContext";
 
 const FoodCard = (props) => {
   const { addOrderItem } = useOrder();
   const [showShareOptions, setShowShareOptions] = useState(false);
+  const [showOrderMessage, setShowOrderMessage] = useState(false);
 
   const handleShareClick = () => {
     setShowShareOptions(true);
@@ -15,6 +16,10 @@ const FoodCard = (props) => {
 
   const handleOrderClick = () => {
     addOrderItem({ title: props.foodTitle, price: props.foodPrice });
+    setShowOrderMessage(true);
+    setTimeout(() => {
+      setShowOrderMessage(false);
+    }, 1000);
   };
 
   return (
@@ -52,6 +57,7 @@ const FoodCard = (props) => {
             </button>
           </div>
         )}
+        {showOrderMessage && <p className="mt-2 text-gray-700 text-center">Item added to order!</p>}
       </div>
     </div>
   );

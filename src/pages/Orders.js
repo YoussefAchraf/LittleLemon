@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useOrder } from "./context/OrderContext";
+
 const Orders = () => {
   const { order } = useOrder();
   const [totalSum, setTotalSum] = useState(0);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  
   useEffect(() => {
     let sum = 0;
     order.forEach((item) => {
       const price = parseFloat(item.price.replace("$", ""));
       sum += price;
     });
-    setTotalSum(sum);
+    setTotalSum(sum.toPrecision(4));
   }, [order]);
+  
   const handleValidateOrder = () => {
     setShowSuccessMessage(true);
   };
+
   return (
     <>
       <Helmet>
@@ -41,21 +45,26 @@ const Orders = () => {
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="Little Lemon, restaurant, orders, online ordering" />
       </Helmet>
-      <section className="w-full h-auto my-[15dvh] overflow-x-hidden">
+      <section className="w-full h-auto my-[15dvh] overflow-x-hidden flex justify-center">
         <div className="max-w-xs mx-auto rounded overflow-hidden shadow-lg">
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 text-gray-700">Your Order</div>
-            {order.map((item, index) => (
-              <div key={index} className="flex justify-between items-center mb-2">
-                <p>{item.title}</p>
-                <p>{item.price}</p>
-              </div>
-            ))}
+            {order.length > 0 ? (
+              order.map((item, index) => (
+                <div key={index} className="flex justify-between items-center mb-2">
+                  <p>{item.title}</p>
+                  <p>{item.price}</p>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500">No items in your order</p>
+            )}
             <div className="font-bold text-xl text-gray-700">Total</div>
-            <p>{totalSum}</p>
+            <p>{totalSum}$</p>
             <button 
               onClick={handleValidateOrder} 
-              className="bg-green-500 text-white font-bold py-2 px-4 rounded mt-4"
+              className={`font-bold py-2 px-4 rounded mt-4 ${order.length === 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-[#f4ce14] text-white'}`}
+              disabled={order.length === 0}
             >
               Validate Order
             </button>
@@ -66,4 +75,5 @@ const Orders = () => {
     </>
   );
 };
+
 export default Orders;
