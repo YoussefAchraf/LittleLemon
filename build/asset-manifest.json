@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5209017.css",
+    "main.js": "/static/js/main.a98a8832.js",
+    "static/js/132.a553abad.chunk.js": "/static/js/132.a553abad.chunk.js",
+    "static/js/144.2a41406c.chunk.js": "/static/js/144.2a41406c.chunk.js",
+    "static/js/453.58784f70.chunk.js": "/static/js/453.58784f70.chunk.js",
+    "static/media/chefs-mario-and-adrian_a.jpg": "/static/media/chefs-mario-and-adrian_a.baf0d2e31dc6977f913f.jpg",
+    "static/media/chicken-parmesan.jpeg": "/static/media/chicken-parmesan.0f22e05e88b6b00bfb7d.jpeg",
+    "static/media/chefs-mario-and-adrian_b.jpg": "/static/media/chefs-mario-and-adrian_b.5d8cccd399ab68c5c40b.jpg",
+    "static/media/greek-salad.jpg": "/static/media/greek-salad.25fc793faeb3d58ed9fb.jpg",
+    "static/media/fruit-tart.jpg": "/static/media/fruit-tart.a7ff21aebabf18873d36.jpg",
+    "static/media/chicken-alfredo.jpeg": "/static/media/chicken-alfredo.d4c105e3ceb0a1b1b23f.jpeg",
+    "static/media/bruschetta.jpg": "/static/media/bruschetta.d54e450bda5efcf06010.jpg",
+    "static/media/restaurant-food.jpg": "/static/media/restaurant-food.827fb0bfe6f625329f41.jpg",
+    "static/media/lemon-dessert.jpg": "/static/media/lemon-dessert.a146cfc0ccf8ce82fae4.jpg",
+    "static/media/shrimp-scampi.jpg": "/static/media/shrimp-scampi.c357018a8569a9485376.jpg",
+    "static/media/steak-frites.jpg": "/static/media/steak-frites.307dbc7a3a386ec07824.jpg",
+    "static/media/caprese-salad.jpg": "/static/media/caprese-salad.414631848b72b012a900.jpg",
+    "static/media/caesar-salad.jpeg": "/static/media/caesar-salad.944399d93eb2da33bcc5.jpeg",
+    "static/media/logo-white.png": "/static/media/logo-white.d09eb2af6c5a2225eedf.png",
+    "static/media/pesto-pasta.jpg": "/static/media/pesto-pasta.b225002bc3c6d62e65aa.jpg",
+    "static/media/spinach-salad.jpg": "/static/media/spinach-salad.7787684df2c515e45eaa.jpg",
+    "static/media/creme-brulee.jpg": "/static/media/creme-brulee.dc33fcb59de52d638ebd.jpg",
+    "static/media/mediterranean-plate.jpg": "/static/media/mediterranean-plate.53b95e4a390e286d611f.jpg",
+    "static/media/customer1.jpg": "/static/media/customer1.ccdcea01362423e8e2bf.jpg",
+    "static/media/customer3.jpg": "/static/media/customer3.ba5a7f9f30d58ab385d9.jpg",
+    "static/media/customer4.jpg": "/static/media/customer4.fa4be855aa1466a1fcb3.jpg",
+    "static/media/customer2.jpg": "/static/media/customer2.333854849cb34643a28e.jpg",
+    "static/media/logo.png": "/static/media/logo.e68246686f716ff6e5d8.png",
+    "index.html": "/index.html",
+    "main.a5209017.css.map": "/static/css/main.a5209017.css.map",
+    "main.a98a8832.js.map": "/static/js/main.a98a8832.js.map",
+    "132.a553abad.chunk.js.map": "/static/js/132.a553abad.chunk.js.map",
+    "144.2a41406c.chunk.js.map": "/static/js/144.2a41406c.chunk.js.map",
+    "453.58784f70.chunk.js.map": "/static/js/453.58784f70.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5209017.css",
+    "static/js/main.a98a8832.js"
+  ]
+}
