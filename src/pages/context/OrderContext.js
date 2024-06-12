@@ -10,7 +10,20 @@ export const OrderProvider = ({ children }) => {
   const [order, setOrder] = useState([]);
 
   const addOrderItem = (item) => {
-    setOrder([...order, item]);
+    const existingItemIndex = order.findIndex((orderItem) => orderItem.title === item.title);
+    if (existingItemIndex !== -1) {
+      const newOrder = [...order];
+      newOrder[existingItemIndex].quantity += item.quantity;
+      setOrder(newOrder);
+    } else {
+      setOrder([...order, item]);
+    }
+  };
+
+  const updateOrderItemQuantity = (index, quantity) => {
+    const newOrder = [...order];
+    newOrder[index].quantity = quantity;
+    setOrder(newOrder);
   };
 
   const removeOrderItem = (index) => {
@@ -20,7 +33,7 @@ export const OrderProvider = ({ children }) => {
   };
 
   return (
-    <OrderContext.Provider value={{ order, addOrderItem, removeOrderItem }}>
+    <OrderContext.Provider value={{ order, addOrderItem, updateOrderItemQuantity, removeOrderItem }}>
       {children}
     </OrderContext.Provider>
   );

@@ -15,7 +15,7 @@ const FoodCard = (props) => {
   };
 
   const handleOrderClick = () => {
-    addOrderItem({ title: props.foodTitle, price: props.foodPrice });
+    addOrderItem({ title: props.foodTitle, price: props.foodPrice, quantity: 1 });
     setShowOrderMessage(true);
     setTimeout(() => {
       setShowOrderMessage(false);
